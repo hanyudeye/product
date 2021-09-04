@@ -1,3 +1,29 @@
-<html>
-    <h2>fhh</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="php.php" enctype="text/plain" method="POST">
+        <input type="text" pattern="[a-zA-Z0-9]*" autocomplete="on" name="name" id="">
+        <select name="xuanxiang" data="localhost:8001/php.php" id=""></select>
+        <select>
+            <optgroup label="北京（组名)">
+                <option>东城区</option>
+                <option>东城区</option>
+            </optgroup>
+            <optgroup label="青岛">
+                <option>李沧区</option>
+                <option>李沧区</option>
+            </optgroup>
+        </select>
+        <input type="submit" value="提交">
+    </form>
+</body>
+
 </html>

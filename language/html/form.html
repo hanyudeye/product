@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>form</title>
+</head>
+
+<body>
+	<form action="">
+		<select>
+			<optgroup label="北京（组名)">
+				<option>东城区</option>
+				<option>东城区</option>
+			</optgroup>
+			<optgroup label="青岛">
+				<option>李沧区</option>
+				<option>李沧区</option>
+			</optgroup>
+		</select>
+
+		<input type="text" list="mylist1">
+		<datalist id="mylist1">
+			<option value="电路原理">
+			<option value="数字电路">
+			<option value="模拟电路">
+			<option value="计算机原理">
+		</datalist>
+
+
+		<input type='text' name='capital' list='capitals' />
+		<datalist id='capitals'>
+			<option value='bj'>北京</option>
+			<option value='jn'>山东</option>
+			<option value='zhzh'>河南</option>
+		</datalist>
+
+
+		<details open>
+			<!-- 顾名思义，总结的意思 -->
+			<summary>世界</summary>
+			<p>世界上有哪些国家</p>
+			<ul>
+				<li>中国</li>
+				<li>美国</li>
+			</ul>
+		</details>
+	</form>
+</body>
+
+</html>
