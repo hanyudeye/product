@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>文件拖曳</title>
+	<style>
+		#em1 {
+			width: 9em;
+			height: 9em;
+			border: 1em solid grey;
+		}
+
+		#em2 {
+			width: 9em;
+			height: 9em;
+			border: 1em solid green;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<div id="em1">元素1</div>
+		<div id="em2">元素2</div>
+	</section>
+	<script>
+		//拖曳事件
+		let em1 = document.getElementById("em1");
+		let em2 = document.getElementById("em2");
+		em1.ondragstart = function (e) {
+			console.log(e)
+		}
+
+		em1.ondragover = function (e) {
+			console.log("ondragover")
+		}
+		em1.ondrag = function (e) {
+			console.log("ondrag拖曳结束")
+		}
+
+
+
+
+	</script>
+</body>
+
+</html>

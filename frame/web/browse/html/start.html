@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>起步</title>
+	<style>
+		h2 {
+			color: red;
+			border: 0.1em solid darkgray;
+			text-align: center;
+		}
+
+		#search{
+			border: 0.01em solid #00b7e9;
+			height: 2em;
+			padding: 1em;
+		}
+
+		#btn{
+			height: 1.5em;
+			width: 1.5em;
+			color: aliceblue;
+			background-color: #00b7e9;
+			border: none;
+			font-size: 1.3em;
+			margin-left: -0.3em;
+			padding-top: 0.1em;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<h2 name="hello">也许</h2>
+		<button id="bt1">按钮</button>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, rem quibusdam a exercitationem
+			accusamus asperiores modi neque aut ut sint expedita illum voluptatibus maxime odio voluptate
+			enim soluta corporis ipsum!
+		</p>
+		<form action="">
+			<input type="text" name="" id="search">
+			<button id="btn">Q</button>
+
+		</form>
+	</section>
+
+	<script>
+		// 事件
+		window.onload = function () {
+			let h = document.getElementsByTagName("h2")[0];
+			console.log(h.innerText)
+			let attr = h.getAttribute("name");
+			console.log(attr)
+			// 事件侦听器 不需要 on
+			let bt1 = document.getElementById("bt1")
+			// bt1.addEventListener("click", function () {
+			// 	console.log("i am clicked")
+			// })
+			// 两种方式
+			bt1.onclick=function(){
+				console.log("i am clicked")
+			}
+
+			document.addEventListener("keypress", function (e) {
+				console.log(e.keyCode)
+			});
+		}
+
+	</script>
+</body>
+
+</html>
