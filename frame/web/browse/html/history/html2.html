@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>这是页面2</title>
 </head>
+
 <body>
-页面2	
-<a href="html3.html">跳转到页面3</a>
+	页面2
+	<a href="html3.html">跳转到页面3</a>
+
+	<button id="forward" onclick="forward()">前进</button>
+	<button id="backward" onclick="backward()">后退</button>
+
+	<div id="click-item">历史记录</div>
+	<div id="result-item">记录</div>
+
+	<script>
+		// window.onload=function
+		let forward=function(){
+			window.history.forward();
+		}
+		let backward=function(){
+			window.history.back()
+		}
+
+		let clickItem=document.getElementById('click-item');
+		let resultItem=document.getElementById('result-item');
+		// 浏览器页面地址会变为 result.html，同时，浏览器的历史记录也会出现此页面的访问记录
+		clickItem.onclick=function(){
+			resultItem.innerHTML="clicked!"
+			history.pushState({note:'set result'},'','result.html')
+		}
+
+		// e.origin
+		// window.postMessage("hello","http://baidu.com")
+	</script>
 </body>
+
 </html>
