@@ -1,4 +1,4 @@
-// ¼ÆËãµÄÒ»Ð©·½·¨
+// è®¡ç®—çš„ä¸€äº›æ–¹æ³•
 class Calculate
 {
     public static void main(String[] args)
