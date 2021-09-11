@@ -36,7 +36,3 @@ setcookie("cookname","cookvalue",time()+3600);
 // header("Cache-Control:no-cache,must-revalidate");
 // header("http/ 404 Not Found");
 // header("Content-type:image/png");
-
-
-$pattern="/^"
-// ^(http://)?([\/]+)/i
