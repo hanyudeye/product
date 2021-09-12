@@ -1,0 +1,5 @@
+{
+	"name": "packagetest",
+	"description": "这是一个包的测试",
+	"main": "./a.js"
+}

@@ -1,0 +1,41 @@
+<html>
+
+<body>
+	<div id="app">
+		<h2>数据显示:</h2>{{msg}}
+
+		<h2>列表显示:</h2>
+		<ul>
+			<li v-for="(item,index) in list" :key="index">{{item}}</li>
+		</ul>
+
+		<h2>事件:</h2>
+		<label for="">当前计数：{{count}}</label>
+		<button @click="count++">+</button>
+		<button @click="count--">-</button>
+		<button @click="add()">+</button>
+		<button @click="sub()">-</button>
+
+
+
+	</div>
+	<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				msg: "hello, Vue world",
+				list: ["hello", "nice", "to", "meet", "you"],
+				count:1,
+			},
+			methods: {
+				add:function(){this.count+=1;},
+				sub:function(){this.count-=1;},
+			},
+		});
+
+	</script>
+</body>
+
+</html>
