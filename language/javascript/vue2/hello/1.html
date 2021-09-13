@@ -16,7 +16,10 @@
 
 		<h2>简单运算:</h2>
 		{{count+1-5}}
-	
+
+		<h2>属性绑定:</h2>
+		<div v-bind:style="style">绑定样式属性</div>
+		<div v-bind:id="'list-' + id">ID属性</div>
 
 
 		<h2>事件:</h2>
@@ -25,6 +28,12 @@
 		<button @click="count--">-</button>
 		<button @click="add()">+</button>
 		<button @click="sub()">-</button>
+
+		<h2>表单:</h2>
+		<input v-model="name">
+		<!-- 这两个有区别，上面一个是联动的 -->
+		<input v-bind:value="name">
+
 
 
 
@@ -37,12 +46,16 @@
 			data: {
 				msg: "hello, Vue world",
 				list: ["hello", "nice", "to", "meet", "you"],
-				count:1,
-				tag:"<a href='#'>超链接</a>",
+				count: 1,
+				tag: "<a href='#'>超链接</a>",
+				style: "color:red;font-size:40px;",
+				id: 3,
+				name:"aming",
+				
 			},
 			methods: {
-				add:function(){this.count+=1;},
-				sub:function(){this.count-=1;},
+				add: function () { this.count += 1; },
+				sub: function () { this.count -= 1; },
 			},
 		});
 
