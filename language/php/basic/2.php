@@ -1,7 +1,2 @@
 <?php
-
-echo "hello,php";
-echo "hello,php";
-echo "hello,php";
-echo "hello,php";
-echo "hello,php";
+echo md5("qx12345679");

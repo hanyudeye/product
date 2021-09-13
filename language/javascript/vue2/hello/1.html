@@ -9,6 +9,16 @@
 			<li v-for="(item,index) in list" :key="index">{{item}}</li>
 		</ul>
 
+		<h2>标签显示:</h2>
+		<div v-html="tag"></div>
+		<h2>显示｛｛｝｝标签 :</h2>
+		<div v-pre>{{这里的内容不会被编译}}</div>
+
+		<h2>简单运算:</h2>
+		{{count+1-5}}
+	
+
+
 		<h2>事件:</h2>
 		<label for="">当前计数：{{count}}</label>
 		<button @click="count++">+</button>
@@ -28,6 +38,7 @@
 				msg: "hello, Vue world",
 				list: ["hello", "nice", "to", "meet", "you"],
 				count:1,
+				tag:"<a href='#'>超链接</a>",
 			},
 			methods: {
 				add:function(){this.count+=1;},

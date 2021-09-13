@@ -1,0 +1,33 @@
+<html>
+
+<body>
+	<div id="app">
+		<h2>当前时间:</h2>{{time}}
+
+
+	</div>
+	<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				time: new Date()
+			},
+			mounted:function() {
+				var _this = this;
+				this.timer = setInterval(function () {
+					_this.time = new Date();
+				}, 1000);
+			},
+			beforeDestroy:function() {
+				if(this.timer){
+					clearInterval(this.timer);
+				}
+			},
+		});
+
+	</script>
+</body>
+
+</html>
